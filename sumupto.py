@@ -4,7 +4,7 @@
 # Begun: 09/02/2019; 16h00
 
 # Asks user to enter an integer
-i = int(input("Enter an integer: "))
+i = int(input("Please enter a positive integer: "))
 
 # Calculates sum and prints answer
 ans = 1
