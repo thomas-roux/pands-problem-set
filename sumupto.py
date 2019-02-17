@@ -14,11 +14,11 @@ elif i < 0:
     i = abs(i)
     print("\nNegative integer changed to positive.")
 
-# Calculates sum and prints answer
-ans = 1
+# Calculates sum and prints total
 total = 0
-while ans <= i:
-    total = total + ans
-    ans = ans + 1
+
+for x in range(i + 1):
+    total = total + x
+
 print("\nThe sum of all numbers between 1 and " + str(i) + " is: " + str(total))
 print()
