@@ -9,7 +9,7 @@ i = int(input("\nPlease enter a positive integer: "))
 # Checks to see if entered characters a valid integer
 if i == 0:
     print("Invalid character - please enter an integer above zero.")
-    # need to work out how to exit programme here or loop back to line 7
+    break
 elif i < 0:
     i = abs(i)
     print("\nNegative integer changed to positive.")
