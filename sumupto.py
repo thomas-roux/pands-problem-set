@@ -3,10 +3,16 @@
 # numbers between one and user entered integer
 # Begun: 09/02/2019; 16h00
 
-# Asks user to enter an integer
-i = int(input("\nPlease enter a positive integer: "))
+# Asks user for input, and checks whether input value an integer
+# Continues to prompt user to enter valid integer until correct
+while True:
+    try:
+        i = int(input("\nPlease enter a positive integer: "))
+        break
+    except ValueError:
+        print("That is not an integer, e.g. 12, 5, 173, etc. Please try again")
 
-# Checks to see if entered character is a valid integer
+# Checks to see if entered character is a integer amenable to computation
 if i == 0:
     print("Invalid character - please enter an integer above zero.")
 # need to work out how to repeat question or quit programme here
