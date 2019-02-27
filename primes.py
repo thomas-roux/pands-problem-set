@@ -12,7 +12,7 @@ while True:
         print("That is not an integer. Please try again")
 
 # Checks to see if entered character is a integer amenable to computation
-# Program will exit if i equal to zero or 1
+# Program will exit if i equal to zero or 1 (1 is not a prime number as only divisible by itself)
 # Program will convert negative integer to positive and continue
 if i == 0: 
     print("\nThat is not a positive integer - please try again.")
@@ -24,7 +24,12 @@ elif i == 1:
     exit()
 elif i < 0: 
     i = abs(i)
-    print("\nNegative integer changed to positive.")
+    if i == 1:
+        print("\nThat is not a prime.")
+        print()
+        exit()
+    else:
+        print("\nNegative integer changed to positive.")
 
 # Create empty list to store values that i is divisible by
 l = []
