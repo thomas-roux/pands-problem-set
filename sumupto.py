@@ -7,16 +7,19 @@
 # Continues to prompt user to enter valid integer until correct
 while True:
     try:
-        i = int(input("\nPlease enter a positive integer: "))
+        i = int(input("\nPlease enter a positive integer above zero: "))
         break
     except ValueError:
-        print("That is not an integer, e.g. 12, 5, 173, etc. Please try again")
+        print("That is not an integer. Please try again")
 
 # Checks to see if entered character is a integer amenable to computation
-if i == 0:
-    print("Invalid character - please enter an integer above zero.")
-# need to work out how to repeat question or quit programme here
-elif i < 0:
+# Program will exit if i equal to 0
+# Program will convert negative integer to positive and continue
+if i == 0: 
+    print("\nInvalid character - please enter an integer above zero.")
+    print()
+    exit()
+elif i < 0: 
     i = abs(i)
     print("\nNegative integer changed to positive.")
 
