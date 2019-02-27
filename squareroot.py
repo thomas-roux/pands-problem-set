@@ -2,8 +2,11 @@
 # Solution to Problem 7 - determines the square root of floating number to two decimal spaces
 # Begun: 27/02/2019; 17h15
 
-# Asks user for input, and checks whether input value an floating point number
-# Continues to prompt user to enter valid floating point number until correct
+# Import the Python mathematics module
+import math
+
+# Asks user for input, and checks whether input value a number
+# Continues to prompt user to enter valid number until correct
 while True:
     try:
         i = float(input("\nPlease enter a positive number: "))
@@ -22,10 +25,9 @@ elif i < 0:
     i = abs(i)
     print("\nNegative number changed to positive.")
 
+# Calculates the square root of the entered value using the math module, and rounds to one decimal space
+sr = round(math.sqrt(i), 1)
 
-for sr in range(1, i):
-    sqr = sr*sr
-    if sqr == i:
-        print("The square root of", i, "is", sr)
-    else: 
-        continue
+# Prints the result
+print("\nThe square root of", i, "is approximately " + str(sr) + ".")
+print()
