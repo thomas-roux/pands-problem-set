@@ -5,8 +5,14 @@
 # Programme ends when value = 1
 # Begun: 20/02/2019; 22h00
 
-# Request user input
-i = int(input("Please enter a positive integer: "))
+# Asks user for input, and checks whether input value an integer
+# Continues to prompt user to enter valid integer until correct
+while True:
+    try:
+        i = int(input("\nPlease enter a positive integer above zero: "))
+        break
+    except ValueError:
+        print("That is not an integer. Please try again")
 
 # Check to see if entered characters a valid integer
 if i == 0:
@@ -26,6 +32,3 @@ while i > 1:
     else:
         i = (i * 3) + 1 
     print(int(i), end = " ")
-
-# Prints empty line 
-print()
