@@ -9,4 +9,6 @@ import datetime as dt
 # dash (-) in %-d and %-I removes zero - https://stackoverflow.com/questions/904928/python-strftime-date-without-leading-0
 print(dt.datetime.strftime(dt.datetime.now(), "%A, %B %-d %Y at %-I:%M %p"))
 
+
+
 # need to come back to work out how to put -st, -rd and -th into day
