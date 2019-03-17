@@ -12,12 +12,12 @@ while True:
         i = int(input("\nPlease enter a positive integer above zero: "))
         break
     except ValueError:
-        print("That is not an integer. Please try again")
+        print("Please enter digits only. Please try again")
 
 # Check to see if entered characters a valid integer
 if i == 0:
     print("Invalid character - please enter an integer above zero.")
-# need to work out how to repeat question or quit programme here
+    print("Exiting program...")
 elif i < 0:
     i = abs(i)
     print("\nNegative integer changed to positive.\n")

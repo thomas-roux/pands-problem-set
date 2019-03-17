@@ -6,21 +6,21 @@
 import math
 
 # Asks user for input, and checks whether input value a number
-# Continues to prompt user to enter valid number until correct
 while True:
     try:
         i = float(input("\nPlease enter a positive number: "))
         break
+    # Continues to prompt user to enter valid number until correct
     except ValueError:
-        print("That is not a number. Please try again")
+        print("Please enter digits only. Please try again")
 
 # Checks to see if entered character is a number amenable to computation
 # Program will exit if i equal to zero
-# Program will convert negative integer to positive and continue
 if i == 0: 
     print("\nThat is not a positive number - please try again.")
     print()
     exit()
+# Program will convert negative integer to positive and continue
 elif i < 0: 
     i = abs(i)
     print("\nNegative number changed to positive.")
@@ -29,5 +29,5 @@ elif i < 0:
 sr = round(math.sqrt(i), 1)
 
 # Prints the result
-print("\nThe square root of", i, "is approximately " + str(sr) + ".")
+print(f"\nThe square root of {i} is approximately {sr}.")
 print()

@@ -3,25 +3,26 @@
 # Begun: 27/02/2019; 16h30
 
 # Asks user for input, and checks whether input value an integer
-# Continues to prompt user to enter valid integer until correct
 while True:
     try:
         i = int(input("\nPlease enter a positive integer: "))
         break
+# Continues to prompt user to enter valid integer until correct
     except ValueError:
-        print("That is not an integer. Please try again")
+        print("Please enter digits only. Please try again")
 
 # Checks to see if entered character is a integer amenable to computation
 # Program will exit if i equal to zero or 1 (1 is not a prime number as only divisible by itself)
-# Program will convert negative integer to positive and continue
 if i == 0: 
     print("\nThat is not a positive integer - please try again.")
+    print("Exiting program...")
     print()
     exit()
 elif i == 1:
     print("\nThat is not a prime.")
     print()
     exit()
+# Program will convert negative integer to positive and continue
 elif i < 0: 
     i = abs(i)
     if i == 1:
@@ -34,7 +35,7 @@ elif i < 0:
 # Create empty list to store values that i is divisible by
 l = []
 
-# Determines whether integer is divisible by more than itself and one
+# Determines whether integer is divisible by more than itself and one. Runs through loop up to, but not including, i
 for pp in range(1,i):
     if i % pp == 0:
         l.append(pp)

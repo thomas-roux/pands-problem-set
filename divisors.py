@@ -1,6 +1,5 @@
 # Thomas Roux
-# Solution to Problem 3 - prints all values between 1,000 and
-# 10,000 that are divisble by 6, but not 12
+# Solution to Problem 3 - prints all values between 1,000 and 10,000 that are divisble by 6, but not 12
 # Begun: 20/02/2019; 21h30
 
 # Create an empty list to store divisible numbers
