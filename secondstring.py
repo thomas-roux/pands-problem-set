@@ -11,7 +11,7 @@ i = input("Please enter a sentence: ")
 # Splits string into seperate words based on white space and stores in a list
 word = i.split()
 
-# Creates a counter to keep track of every second word
+# Creates a counter to keep track of every second word. If every odd word is preferred (i.e. word 1 + 3 + ...) change 'index = 0'
 index = 1
 
 # Loops through individual words in list 'word' and outputs every second word next to each other

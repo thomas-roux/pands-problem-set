@@ -18,6 +18,7 @@ while True:
 # Program will exit if i equal to zero
 if i == 0: 
     print("\nThat is not a positive number - please try again.")
+    print("Exiting program...")
     print()
     exit()
 # Program will convert negative integer to positive and continue

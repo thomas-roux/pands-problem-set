@@ -20,6 +20,6 @@ elif day == 3 or day == 23:
 else:
     suf = ("th")
 
-# Prints today's date in specified format
+# Prints today's date in specified format with pre-determined date suffix
 # dash (-) in %-d and %-I removes zero - https://stackoverflow.com/questions/904928/python-strftime-date-without-leading-0
 print(dt.datetime.strftime(dt.datetime.now(), f"%A, %B %-d{suf} %Y at %-I:%M %p"))
