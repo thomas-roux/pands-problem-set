@@ -5,18 +5,21 @@
 # Imports datetime module
 import datetime as dt
 
+# Creates a single value integer for today's date to determine suffix - https://www.programiz.com/python-programming/datetime
+today = dt.date.today()
+day = today.day
+
 # Creates the necessary suffix for the date based on the date number
 # Kudos to ED (fellow student) for explaining
-suf = ()
-if dt.datetime.strftime(dt.datetime.now(), "%d") == 1 or 21 or 31:
+if day == 1 or day == 21 or day == 31:
     suf = ("st")
-elif dt.datetime.strftime(dt.datetime.now(), "%d") == 2 or 22:
+elif day == 2 or day == 22:
     suf = ("nd")
-elif dt.datetime.strftime(dt.datetime.now(), "%d") == 3 or 23:
+elif day == 3 or day == 23:
     suf = ("rd")
 else:
     suf = ("th")
 
 # Prints today's date in specified format
 # dash (-) in %-d and %-I removes zero - https://stackoverflow.com/questions/904928/python-strftime-date-without-leading-0
-print(dt.datetime.strftime(dt.datetime.now(), "%A, %B %-d" + suf + " %Y at %-I:%M %p"))
+print(dt.datetime.strftime(dt.datetime.now(), f"%A, %B %-d{suf} %Y at %-I:%M %p"))
