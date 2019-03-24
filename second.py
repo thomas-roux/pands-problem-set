@@ -5,8 +5,17 @@
 # Imports sys to allow filename argument from command line - https://stackoverflow.com/questions/7033987/python-get-files-from-command-line
 import sys
 
+# Checks to see if only one filename entered
+if len(sys.argv) == 2:
+    print()
+# Exits if none, or more than one, filename entered
+else:
+    print()
+    print("Please enter a single filename.")
+    print()
+    exit()
+
 # Gives filename to last argument from command line. It is assumed file is within same directory python is executed in.
-# This will only read the last argument - if there is more than one file name, only the last will be executed
 filename = sys.argv[-1]
 
 # Creates index to track line count
