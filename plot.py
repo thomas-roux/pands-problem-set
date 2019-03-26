@@ -11,13 +11,16 @@ x = np.arange(5)
 
 # Calculate plot placements according to function specified above and individualise function graphics - 
 # https://matplotlib.org/users/pyplot_tutorial.html
-plt.plot(x, x, 'r--', x, x**2, 'bs', x, x * 2, 'g^')
+plt.plot(x, x, 'ro', label = "y = x")
+plt.plot(x, x * 2, 'g^', label = "y = 2x")
+plt.plot(x, x**2, 'bs', label = "y = x**2")
     
 # Label graph
 plt.xlabel('X value')
 plt.ylabel('Y value')
-plt.title('Function of x, x**2, 2x', fontsize = 14)
+plt.title('Function of x, 2x, x**2', fontsize = 14)
+plt.legend(loc = "upper left", fontsize = "small")
 
-plt.legend(loc = 'upper left')
+# Print graph
 plt.show()
     
