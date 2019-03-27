@@ -7,7 +7,7 @@ import sys
 
 # Checks to see if only one filename entered
 if len(sys.argv) == 2:
-    print()
+    pass
 # Exits if none, or more than one, filename entered
 else:
     print()
