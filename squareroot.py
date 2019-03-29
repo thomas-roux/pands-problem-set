@@ -1,5 +1,5 @@
 # Thomas Roux
-# Solution to Problem 7 - determines the square root of floating number to two decimal spaces
+# Solution to Problem 7 - determines the square root of floating number to one decimal space
 # Begun: 27/02/2019; 17h15
 
 # Import the Python mathematics module
@@ -12,14 +12,13 @@ while True:
         break
     # Continues to prompt user to enter valid number until correct
     except ValueError:
-        print("Please enter digits only. Please try again")
+        print("\nPlease enter digits only. Please try again")
 
 # Checks to see if entered character is a number amenable to computation
 # Program will exit if i equal to zero
 if i == 0: 
     print("\nThat is not a positive number - please try again.")
-    print("Exiting program...")
-    print()
+    print("Exiting program...\n")
     exit()
 # Program will convert negative integer to positive and continue
 elif i < 0: 
@@ -30,5 +29,4 @@ elif i < 0:
 sr = round(math.sqrt(i), 1)
 
 # Prints the result
-print(f"\nThe square root of {i} is approximately {sr}.")
-print()
+print(f"\nThe square root of {i} is approximately {sr}.\n")

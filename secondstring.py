@@ -6,13 +6,16 @@
 import string
 
 # Asks user to input string
-i = input("Please enter a sentence: ")
+i = input("\nPlease enter a sentence:\n\n")
 
 # Splits string into seperate words based on white space and stores in a list
 word = i.split()
 
 # Creates a counter to keep track of every second word. If every odd word is preferred (i.e. word 1 + 3 + ...) change 'index = 0'
 index = 1
+
+# Prints an empty line for visual clarity
+print()
 
 # Loops through individual words in list 'word' and outputs every second word next to each other
 for wrd in word:
@@ -25,6 +28,6 @@ for wrd in word:
     # loops counter for next iteration
     index = index + 1
 
-# Prints an empty line
-print()
+# Prints empty lines for visual clarity
+print("\n")
 

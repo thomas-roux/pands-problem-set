@@ -9,25 +9,22 @@ while True:
         break
 # Continues to prompt user to enter valid integer until correct
     except ValueError:
-        print("Please enter digits only. Please try again")
+        print("\nPlease enter digits only. Please try again")
 
 # Checks to see if entered character is a integer amenable to computation
 # Program will exit if i equal to zero or 1 (1 is not a prime number as only divisible by itself)
 if i == 0: 
     print("\nThat is not a positive integer - please try again.")
-    print("Exiting program...")
-    print()
+    print("Exiting program...\n")
     exit()
 elif i == 1:
-    print("\nThat is not a prime.")
-    print()
+    print("\nThat is not a prime.\n")
     exit()
 # Program will convert negative integer to positive and continue
 elif i < 0: 
     i = abs(i)
     if i == 1:
-        print("\nThat is not a prime.")
-        print()
+        print("\nThat is not a prime.\n")
         exit()
     else:
         print("\nNegative integer changed to positive.")
@@ -46,9 +43,7 @@ for pp in range(1,i):
 # some other values), then not prime.
 # Prints result
 if len(l) > 1:
-    print("\nThat is not a prime.")
-    print()
+    print("\nThat is not a prime.\n")
 else: 
-    print("\nThat is a prime.")
-    print()
+    print("\nThat is a prime.\n")
     

@@ -9,7 +9,8 @@ import datetime as dt
 today = dt.date.today()
 
 # Determines if today is Tuesday (1) or Thursday (3) and prints response
+# dt.date.weekday works on the coding of Monday = 0, Sunday = 6
 if dt.date.weekday(today) == 1 or dt.date.weekday(today) == 3:
-    print("Yes - today begins with a T.")
+    print("\nYes - today begins with a T.\n")
 else:
-    print("No - today does not begin with a T.")
+    print("\nNo - today does not begin with a T.\n")

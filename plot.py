@@ -22,5 +22,6 @@ plt.title('Function of x, 2x, x**2', fontsize = 14)
 plt.legend(loc = "upper left", fontsize = "small")
 
 # Print graph
+print("\nPlot will open in new window.\n")
 plt.show()
     

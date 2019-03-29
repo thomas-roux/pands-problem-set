@@ -6,26 +6,27 @@
 # Begun: 20/02/2019; 22h00
 
 # Asks user for input, and checks whether input value an integer
-# Continues to prompt user to enter valid integer until correct
 while True:
     try:
         i = int(input("\nPlease enter a positive integer above zero: "))
         break
+# Continues to prompt user to enter valid integer until correct
     except ValueError:
-        print("Please enter digits only. Please try again")
+        print("\nPlease enter digits only. Please try again")
 
 # Check to see if entered characters a valid integer
 if i == 0:
-    print("Invalid character - please enter an integer above zero.")
-    print("Exiting program...")
+    print("\nInvalid character - please enter an integer above zero.")
+    print("Exiting program...\n")
+    quit()
 elif i < 0:
     i = abs(i)
     print("\nNegative integer changed to positive.\n")
 
 # Displays user chosen integer on same line as results
-print(i, end = " ")
+print(f"\n{i}", end = " ")
 
-# Performs calculation and displays result of each step until value = 1
+# Performs calculation and displays result of each step on same line until value = 1
 while i > 1:
     if i % 2 == 0:
         i = i / 2
@@ -33,5 +34,5 @@ while i > 1:
         i = (i * 3) + 1 
     print(int(i), end = " ")
 
-# Prints empty line 
-print()
+# Prints empty lines for visual clarity on output
+print("\n")

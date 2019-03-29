@@ -10,22 +10,25 @@ if len(sys.argv) == 2:
     pass
 # Exits if none, or more than one, filename entered
 else:
-    print()
-    print("Please enter a single filename.")
-    print()
+    print("\nPlease enter a single filename.\n")
     exit()
 
-# Gives filename to last argument from command line. It is assumed file is within same directory python is executed in.
+# Gives filename to last argument from command line
 filename = sys.argv[-1]
 
 # Creates index to track line count
 index = 1
 
-# Reads each line and prints every second line of text
 # Opens file with 'with' argument to ensure closure - https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
-with open(filename, 'r') as f:
-    for line in f:
-        if index % 2 == 0:
-            print(line)
-        index = index + 1
+# Uses 'try/except' clause in case file missing or path incorrect - https://stackoverflow.com/a/52554112
+try:
+    with open(filename, 'r') as f:
+        # Prints every second line of file
+        for line in f:
+            if index % 2 == 0:
+                print(line)
+            index = index + 1
+except FileNotFoundError:
+    print("\nFile not found. Check filename and path variable.\n")
+    exit()
     
